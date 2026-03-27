@@ -68,13 +68,25 @@ html{background:#f0f0f0;}
 .footer-info{font-size:10px;font-weight:500;color:#aaa;text-align:right;line-height:1.8;}
 .footer-info a{color:#555;text-decoration:none;font-weight:700;}
 
-/* Flash deal banner */
-.flash-banner{background:linear-gradient(135deg,#c0392b,#96281b);border-radius:14px;padding:18px 24px;margin-bottom:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-.flash-icon{font-size:28px;flex-shrink:0;}
-.flash-text-wrap{}
-.flash-title{font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:4px;}
-.flash-desc{font-size:15px;font-weight:800;color:#fff;letter-spacing:-0.3px;line-height:1.35;}
-.flash-sub{font-size:10px;font-weight:600;color:rgba(255,255,255,0.6);margin-top:4px;}
+/* Mauricie en lumière section */
+.mel-block{background:#2d2d2d;border-radius:16px;padding:28px 28px 24px;margin-bottom:14px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start;}
+.mel-left{}
+.mel-eyebrow{font-size:8px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:14px;}
+.mel-eyebrow span{color:#f0c040;}
+.mel-title{font-size:30px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1;margin-bottom:14px;}
+.mel-desc{font-size:11px;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.75;max-width:480px;margin-bottom:0;}
+.mel-desc strong{color:#fff;font-weight:700;}
+.mel-right{display:flex;flex-direction:column;align-items:center;gap:12px;flex-shrink:0;}
+.mel-badge{background:#fff;border-radius:12px;padding:18px 24px;text-align:center;min-width:160px;}
+.mel-badge-amount{font-size:44px;font-weight:800;color:#2d2d2d;letter-spacing:-2px;line-height:1;}
+.mel-badge-label{font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-top:4px;line-height:1.4;}
+.mel-btn{display:inline-block;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.35);font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;border-radius:7px;text-decoration:none;white-space:nowrap;width:100%;text-align:center;}
+.mel-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid rgba(255,255,255,0.1);margin-top:22px;padding-top:20px;}
+.mel-step{display:flex;align-items:flex-start;gap:12px;padding-right:20px;}
+.mel-step:not(:last-child){border-right:1px solid rgba(255,255,255,0.1);margin-right:20px;}
+.mel-step-num{background:rgba(255,255,255,0.12);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;flex-shrink:0;margin-top:1px;}
+.mel-step-text{font-size:10.5px;font-weight:500;color:rgba(255,255,255,0.6);line-height:1.6;}
+.mel-step-text strong{color:rgba(255,255,255,0.9);font-weight:700;}
 
 @media(max-width:700px){
   .plans{grid-template-columns:1fr;}
@@ -85,6 +97,9 @@ html{background:#f0f0f0;}
   .header{flex-direction:column;align-items:flex-start;gap:12px;}
   .footer{flex-direction:column;align-items:flex-start;}
   .footer-info{text-align:left;}
+  .mel-block{grid-template-columns:1fr;}
+  .mel-steps{grid-template-columns:1fr;gap:14px;}
+  .mel-step:not(:last-child){border-right:none;margin-right:0;padding-right:0;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:14px;}
 }
 </style>
 </head>
@@ -129,7 +144,7 @@ html{background:#f0f0f0;}
         <li><strong>Drone inclus</strong> — prises aériennes</li>
         <li>Photos lifestyle — activités, équipes, lieux</li>
         <li>Album privé mis à jour chaque mois</li>
-        <li>Réunion stratégique mensuelle incluse</li>
+        <li><strong>Réunion stratégique 30 min</strong> — virtuelle, avant chaque shooting</li>
         <li>Déplacement inclus — zone Mauricie</li>
       </ul>
     </div>
@@ -155,7 +170,7 @@ html{background:#f0f0f0;}
         <li><strong>Drone inclus</strong> — prises aériennes</li>
         <li>Photos lifestyle — activités, équipes, lieux</li>
         <li>Album privé mis à jour chaque mois</li>
-        <li>Réunion stratégique mensuelle incluse</li>
+        <li><strong>Réunion stratégique 30 min</strong> — virtuelle, avant chaque shooting</li>
         <li>Déplacement inclus — zone Mauricie</li>
       </ul>
     </div>
@@ -169,7 +184,7 @@ html{background:#f0f0f0;}
     <span class="inclus-item">Album privé permanent</span>
     <span class="inclus-item">Droits commerciaux inclus</span>
     <span class="inclus-item">Drone inclus</span>
-    <span class="inclus-item">Réunion stratégique mensuelle</span>
+    <span class="inclus-item">Réunion stratégique 30 min — virtuelle</span>
     <span class="inclus-item">Calendrier d'idées & contenu</span>
     <span class="inclus-item">Haute résolution</span>
     <span class="inclus-item">Déplacement inclus — zone Mauricie</span>
@@ -188,7 +203,6 @@ html{background:#f0f0f0;}
     <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:8px;">Engagement</div>
     <div style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#2d2d2d;line-height:1;">3 mois</div>
     <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
-    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album privé actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br><br>+30 $ / photo additionnelle.</div>
   </div>
 
   <div style="background:#fff;border:1.5px solid #c0392b;border-top:3px solid #c0392b;border-radius:12px;padding:18px 20px;">
@@ -202,7 +216,7 @@ html{background:#f0f0f0;}
       <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#c0392b;margin-bottom:3px;">✦ Offre spéciale</div>
       <div style="font-size:11px;font-weight:700;color:#2d2d2d;line-height:1.5;">+15 photos <span style="font-weight:500;color:#666;">offertes chaque mois</span></div>
     </div>
-    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br>+ 20 $ / photo additionnelle.</div>
+    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;"></div>
   </div>
 
   <div style="background:#fff;border:1.5px solid #c0392b;border-top:3px solid #c0392b;border-radius:12px;padding:18px 20px;">
@@ -216,12 +230,30 @@ html{background:#f0f0f0;}
       <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#c0392b;margin-bottom:3px;">✦ Offre spéciale</div>
       <div style="font-size:11px;font-weight:700;color:#2d2d2d;line-height:1.5;">Dernier mois <span style="font-weight:500;color:#666;">offert gratuitement</span></div>
     </div>
-    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br>+ 15 $ / photo additionnelle.</div>
+    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;"></div>
   </div>
 
 </div>
 
-<div class="bimg-strip">
+<div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+  <div>
+    <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:6px;">Options · Photos additionnelles</div>
+    <div style="font-size:13px;font-weight:700;color:#2d2d2d;">Besoin de plus de photos ce mois-ci?</div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+    <div style="background:#f8f8f8;border:1.5px solid #e0e0e0;border-radius:10px;padding:12px 18px;text-align:center;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;margin-bottom:4px;">Bloc</div>
+      <div style="font-size:20px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;">+15 photos</div>
+      <div style="font-size:14px;font-weight:700;color:#c0392b;margin-top:2px;">100 $<span style="font-size:9px;font-weight:500;color:#aaa;"> + tx</span></div>
+    </div>
+    <div style="background:#f8f8f8;border:1.5px solid #e0e0e0;border-radius:10px;padding:12px 18px;text-align:center;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;margin-bottom:4px;">Bloc</div>
+      <div style="font-size:20px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;">+30 photos</div>
+      <div style="font-size:14px;font-weight:700;color:#c0392b;margin-top:2px;">200 $<span style="font-size:9px;font-weight:500;color:#aaa;"> + tx</span></div>
+    </div>
+    <div style="font-size:10px;font-weight:500;color:#aaa;max-width:160px;line-height:1.6;">Ou à l'unité selon votre engagement actif</div>
+  </div>
+</div>
   <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:8px;">📁 Votre banque d'images privée</div>
   <div style="font-size:11.5px;font-weight:500;color:#555;line-height:1.75;">Chaque photo livrée est ajoutée à votre <strong style="color:#2d2d2d;">album privé dédié</strong> — accessible à toute votre organisation, en tout temps. La banque grandit chaque mois. Elle reste active pendant toute la durée de l'entente, <strong style="color:#2d2d2d;">plus 3 mois après la fin</strong> pour vous permettre de finaliser vos projets en cours. Un outil vivant!</div>
 </div>
@@ -244,24 +276,56 @@ html{background:#f0f0f0;}
     <div style="font-size:10px;font-weight:500;color:#888;margin-top:4px;line-height:1.6;"><strong style="color:#2d2d2d;">5-10 portraits retouchés</strong> remis par personne · fond blanc, noir, neutre ou environnement de travail (lifestyle)</div>
   </div>
   <div class="addon">
-    <div class="addon-tag">Inclus dans les 2 plans</div>
-    <div class="addon-name">Réunion stratégique mensuelle</div>
-    <div class="addon-desc">Avant chaque shooting, on se rencontre pour définir les angles et les thématiques selon votre calendrier de contenu. Idées, séquences suggérées, événements à couvrir — on planifie ensemble pour maximiser chaque heure sur le terrain.</div>
-    <div style="font-size:20px;font-weight:800;color:#27ae60;">Incluse<span style="font-size:10px;font-weight:500;color:#aaa;"> dans tous les plans</span></div>
+    <div class="addon-tag">Inclus dans les plans</div>
+    <div class="addon-name">Réunion stratégique mensuelle — 30 min virtuelle</div>
+    <div class="addon-desc">Avant chaque shooting, rencontre virtuelle de 30 minutes pour définir les angles et les thématiques selon votre calendrier de contenu. Idées, séquences suggérées, événements à couvrir — on planifie ensemble pour maximiser chaque heure sur le terrain. <strong style="color:#2d2d2d;">Le temps de shooting n'est pas inclus dans ce 30 min.</strong></div>
+    <div style="font-size:20px;font-weight:800;color:#27ae60;">Incluse<span style="font-size:10px;font-weight:500;color:#aaa;"> dans les plans</span></div>
     <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
     <div style="font-size:10px;font-weight:500;color:#888;line-height:1.6;">Calendrier d'idées · thèmes du mois · angles prioritaires · liste de shots · coordination terrain</div>
   </div>
 </div>
 
-<div class="note-white" style="margin-bottom:14px;">
-  <div class="note-title">✦ Comment ça fonctionne</div>
-  <div class="note-text">
-    <strong>1. Réunion de démarrage</strong> — On établit ensemble votre profil de contenu : valeurs, thèmes, publics cibles, ton visuel.<br><br>
-    <strong>2. Planification mensuelle</strong> — Avant chaque shooting, réunion courte pour définir les angles du mois & les activités à couvrir.<br><br>
-    <strong>3. Shooting sur terrain</strong> — Notre photographe arrive préparé. Photos lifestyle, activités, équipes, lieux — sous tous les angles.<br><br>
-    <strong>4. Livraison</strong> — Photos retouchées HD ajoutées à votre album privé dans les <strong>7–10 jours</strong> suivant le shooting.
+
+
+<!-- ✦ MAURICIE EN LUMIÈRE SECTION -->
+<div style="margin-bottom:12px;">
+  <div class="sec-eyebrow">✦ Offre exclusive · Plateforme régionale</div>
+  <div class="sec-title">Mauricie en lumière</div>
+  <div class="sec-divider"></div>
+</div>
+
+<div class="mel-block">
+  <div class="mel-left">
+    <div class="mel-eyebrow"><span>✦</span> OFFRE EXCLUSIVE · PLATEFORME RÉGIONALE</div>
+    <div class="mel-title">Mauricie en lumière ✨</div>
+    <div class="mel-desc">
+      Vos photos rejoignent une banque de visuels professionnels accessible aux médias, entreprises et organismes de la Mauricie. <strong>Aucun effort de votre part</strong> — notre équipe sélectionne les images. Une simple décharge suffit.
+    </div>
+    <div class="mel-steps">
+      <div class="mel-step">
+        <div class="mel-step-num">1</div>
+        <div class="mel-step-text"><strong>Signature d'une décharge</strong> d'utilisation d'images sélectionnées</div>
+      </div>
+      <div class="mel-step">
+        <div class="mel-step-num">2</div>
+        <div class="mel-step-text"><strong>Notre équipe intègre</strong> les images choisies dans la banque régionale</div>
+      </div>
+      <div class="mel-step">
+        <div class="mel-step-num">3</div>
+        <div class="mel-step-text">Le rabais de <strong>50$/mois est appliqué</strong> dès le mois suivant</div>
+      </div>
+    </div>
+  </div>
+  <div class="mel-right">
+    <div class="mel-badge">
+      <div class="mel-badge-amount">-50$</div>
+      <div class="mel-badge-label">/ mois sur<br>votre forfait</div>
+    </div>
+    <a href="https://www.mauricieenlumiere.com" class="mel-btn">Découvrir la plateforme →</a>
   </div>
 </div>
+
+<!-- FIN MAURICIE EN LUMIÈRE -->
 
 <div style="margin-bottom:12px;">
   <div class="sec-eyebrow">Déplacement</div>
@@ -280,25 +344,41 @@ html{background:#f0f0f0;}
     <div class="note-white" style="margin-bottom:0;flex:1;">
       <div class="note-title">💳 Conditions de paiement</div>
       <div class="note-text">
-        <strong>À la signature :</strong> Les 2 premiers mois sont dus pour confirmer l'engagement et démarrer la planification.<br><br>
-        <strong>En cours d'entente :</strong> Facturation mensuelle le 1er de chaque mois, dû dans les <strong>15 jours</strong>.<br><br>
-        <strong>Dernier mois :</strong> Payé à la fin — aucun paiement d'avance sur le dernier mois.
+        <strong>À la signature :</strong> 2 premiers mois facturés pour confirmer l'engagement et démarrer la planification.<br><br>
+        <strong>En cours d'entente :</strong> Facturation mensuelle le 1er de chaque mois, dû dans les <strong>30 jours</strong>.<br><br>
+        <strong>Dernier mois :</strong> Payé à la fin — aucun paiement d'avance sur le dernier mois.<br><br>
+        <span style="font-size:10px;color:#888;">Forfaits 6 et 12 mois : 2 mois à la signature, puis au mois jusqu'à la fin.</span>
       </div>
     </div>
     <div class="note-white" style="margin-bottom:0;flex:1;">
       <div class="note-title">❌ Politique d'annulation</div>
       <div class="note-text">
-        <strong>Report d'un shooting :</strong> Flexible — sur réserve des disponibilités. Les dates doivent être réservées le plus tôt possible pour garantir votre créneau.<br><br>
-        <strong>Annulation du forfait complet :</strong> Tous les mois complétés doivent être payés en totalité. Le dernier mois doit également être payé pour confirmer la résiliation.<br><br>
-        Toute annulation doit être transmise par écrit.
+        <strong>Report d'un shooting :</strong> Flexible — sur réserve des disponibilités. Remise sous 72h pour nous permettre de réajuster notre horaire. Annulation à moins de 72h : frais applicables.<br><br>
+        <strong>Annulation du forfait complet :</strong> Tous les mois complétés doivent être payés en totalité. Les mois non produits sont remboursés. Le dernier mois doit être payé pour confirmer la résiliation.<br><br>
+        Toute annulation doit être transmise par écrit · préavis 30 jours.
       </div>
     </div>
   </div>
 </div>
 
-<div style="background:#fdf4f4;border:1.5px solid #f0d0d0;border-left:4px solid #c0392b;border-radius:10px;padding:18px 20px;margin-bottom:20px;">
-  <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:10px;">🚁 Drone — conditions opérationnelles</div>
-  <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.7;">Le drone est inclus sous réserve des <strong style="color:#2d2d2d;">conditions météorologiques</strong> (vent, précipitations, visibilité) et des <strong style="color:#2d2d2d;">autorisations réglementaires applicables</strong> (Transports Canada, zones contrôlées, espaces aériens restreints). Certaines zones peuvent nécessiter des autorisations spéciales — <strong style="color:#c0392b;">sur soumission si applicable.</strong> <strong style="color:#c0392b;">Média Mauricie se réserve le droit de refuser ou d'annuler le vol de drone en tout temps</strong> si les conditions ne permettent pas une opération sécuritaire, <strong style="color:#2d2d2d;">sans réduction du prix du forfait.</strong></div>
+<!-- CONDITIONS LÉGALES & OPÉRATIONNELLES -->
+<div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:22px 24px;margin-bottom:14px;">
+  <div>
+    <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:12px;">⚖️ Droits & livraison</div>
+    <div style="display:flex;flex-direction:column;gap:7px;">
+      <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><span style="color:#27ae60;font-weight:800;flex-shrink:0;">✓</span><span><strong style="color:#2d2d2d;">Licence commerciale illimitée</strong> — réseaux, pub payante, web, affichage, imprimé</span></div>
+      <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><span style="color:#27ae60;font-weight:800;flex-shrink:0;">✓</span><span>Média Mauricie <strong style="color:#2d2d2d;">conserve le droit d'auteur</strong></span></div>
+      <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><span style="color:#27ae60;font-weight:800;flex-shrink:0;">✓</span><span><strong style="color:#2d2d2d;">Stockage inclus</strong> pendant le contrat + 6 mois après</span></div>
+      <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.6;display:flex;align-items:flex-start;gap:8px;"><span style="color:#27ae60;font-weight:800;flex-shrink:0;">✓</span><span><strong style="color:#2d2d2d;">Assurances</strong> responsabilité civile professionnelle — photo & drone</span></div>
+    </div>
+  </div>
+  <div style="border-top:1px solid #f0f0f0;margin-top:18px;padding-top:14px;">
+    <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:10px;">Clauses opérationnelles</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;">
+      <div style="font-size:10px;font-weight:500;color:#888;background:#f8f8f8;border-radius:6px;padding:5px 10px;line-height:1.5;">→ <strong style="color:#2d2d2d;">Drone :</strong> inclus selon météo, réglementations Transport Canada & nature du tournage</div>
+      <div style="font-size:10px;font-weight:500;color:#888;background:#f8f8f8;border-radius:6px;padding:5px 10px;line-height:1.5;">→ <strong style="color:#2d2d2d;">Permis de tournage :</strong> autorisations spéciales à la charge du client</div>
+    </div>
+  </div>
 </div>
 
 <div class="cta-row" style="margin-top:20px;">
@@ -306,14 +386,10 @@ html{background:#f0f0f0;}
   <a href="https://www.mediamauricie.com/contact" class="btn-secondary">Nous contacter pour une soumission</a>
 </div>
 
-<div class="info-footer-dark">
+<div class="info-footer-dark" style="grid-template-columns:1fr 1fr;">
   <div>
     <div class="info-col-label">💰 Tarification</div>
     <div class="info-col-text">Prix en <strong>dollars canadiens</strong><br>+ taxes applicables (TPS/TVQ)<br><span>Sujets à confirmation selon envergure</span></div>
-  </div>
-  <div>
-    <div class="info-col-label">📅 Engagement</div>
-    <div class="info-col-text">Engagement minimum selon durée choisie · <strong>Album actif 3 mois après la fin</strong> · Résiliation avec préavis écrit de 30 jours</div>
   </div>
   <div>
     <div class="info-col-label">🛡️ Assurances</div>
@@ -324,4 +400,10 @@ html{background:#f0f0f0;}
 <div class="footer">
   <img src="https://mediamauricie.com/wp-content/uploads/2026/03/Media-Mauricie_logo_coul.png" alt="Média Mauricie" style="height:34px;">
   <div class="footer-info">
-    <a href="https://www.mediamauricie.com">www.mediamauricie.com</a> &nbsp;&middot;&nbsp; <a href="/cdn-cgi/l/email-protection#adc4c3cbc2edc0c8c9c4ccc0ccd8dfc4cec4c883cec2c0"><span class="__cf_emai
+    <a href="https://www.mediamauricie.com">www.mediamauricie.com</a> &nbsp;&middot;&nbsp; <a href="mailto:info@mediamauricie.com">info@mediamauricie.com</a>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
