@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banque d'images mensuelle — Média Mauricie</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;background:#f0f0f0;color:#2d2d2d;min-height:100vh;}
+html{background:#f0f0f0;}
+.wrap{max-width:900px;margin:0 auto;padding:48px 24px 64px;}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:52px;}
+.header-badge{background:#2d2d2d;color:#fff;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;}
+.hero{margin-bottom:44px;}
+.hero-eyebrow{font-size:12px;font-weight:600;color:#c0392b;margin-bottom:16px;line-height:1.6;max-width:580px;}
+.hero-title{font-size:52px;font-weight:800;color:#2d2d2d;line-height:1;letter-spacing:-2px;margin-bottom:20px;}
+.hero-sub{font-size:13px;font-weight:500;color:#666;line-height:1.8;}
+.hero-sub strong{color:#2d2d2d;font-weight:700;}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.plan{background:#fff;border:1.5px solid #e0e0e0;border-radius:16px;overflow:hidden;}
+.plan.featured{border-color:#2d2d2d;border-width:2px;border-top:3px solid #c0392b;}
+.plan-head{padding:24px 26px 20px;}
+.plan-badge{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:16px;background:#2d2d2d;color:#fff;}
+.plan.featured .plan-badge{background:#c0392b;}
+.plan-name{font-size:18px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;margin-bottom:4px;}
+.plan-tagline{font-size:10.5px;font-weight:500;color:#888;line-height:1.5;margin-bottom:18px;}
+.plan-price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:4px;}
+.plan-price{font-size:46px;font-weight:700;letter-spacing:-2px;color:#2d2d2d;line-height:1;}
+.plan-price-suffix{font-size:14px;font-weight:600;color:#aaa;}
+.plan-price-note{font-size:10px;font-weight:600;color:#27ae60;margin-bottom:0;}
+.plan-divider{height:1px;background:#f0f0f0;margin:18px 0;}
+.plan-section-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:10px;}
+.plan-items{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:0;}
+.plan-items li{font-size:11px;font-weight:500;color:#555;display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
+.plan-items li::before{content:'✓';color:#c0392b;font-weight:800;font-size:10px;flex-shrink:0;margin-top:1px;}
+.plan-items li strong{color:#2d2d2d;font-weight:700;}
+.plan-body{padding:0 26px 24px;}
+.inclus-strip{background:#2d2d2d;border-radius:10px;padding:14px 20px;margin-bottom:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.inclus-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);white-space:nowrap;flex-shrink:0;}
+.inclus-items{display:flex;gap:7px;flex-wrap:wrap;}
+.inclus-item{background:rgba(255,255,255,0.1);border:1.5px solid rgba(255,255,255,0.15);border-radius:20px;padding:4px 12px;font-size:10px;font-weight:600;color:rgba(255,255,255,0.8);}
+.sec-eyebrow{font-size:8px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#c0392b;margin-bottom:6px;}
+.sec-title{font-size:22px;font-weight:800;color:#2d2d2d;letter-spacing:-0.5px;margin-bottom:6px;}
+.sec-divider{height:2px;background:#c0392b;width:36px;margin-bottom:18px;}
+.addons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.addon{background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:20px 22px;}
+.addon-tag{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:6px;}
+.addon-name{font-size:14px;font-weight:800;color:#2d2d2d;margin-bottom:4px;}
+.addon-desc{font-size:10.5px;font-weight:500;color:#888;line-height:1.6;margin-bottom:12px;}
+.note-white{background:#fff;border:1.5px solid #e0e0e0;border-radius:10px;padding:20px 24px;margin-bottom:12px;}
+.note-title{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#444;margin-bottom:10px;}
+.note-text{font-size:11.5px;font-weight:500;color:#555;line-height:1.75;}
+.note-text strong{color:#2d2d2d;font-weight:700;}
+.bimg-strip{background:#fdf4f4;border:1.5px solid #f0d0d0;border-left:4px solid #c0392b;border-radius:10px;padding:16px 20px;margin-bottom:14px;}
+.transport-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.transport-right{display:flex;flex-direction:column;gap:12px;}
+.info-footer-dark{background:#2d2d2d;border-radius:12px;padding:20px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:16px;}
+.info-col-label{font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:7px;}
+.info-col-text{font-size:10.5px;font-weight:500;color:rgba(255,255,255,0.65);line-height:1.65;}
+.info-col-text strong{color:#fff;}
+.info-col-text span{color:rgba(255,255,255,0.4);}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+.btn-primary{display:inline-block;background:#2d2d2d;color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:13px 26px;border-radius:7px;text-decoration:none;}
+.btn-secondary{display:inline-block;background:transparent;color:#2d2d2d;border:2px solid #2d2d2d;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:11px 26px;border-radius:7px;text-decoration:none;}
+.footer{padding-top:22px;border-top:1.5px solid #ddd;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer img{height:34px;width:auto;}
+.footer-info{font-size:10px;font-weight:500;color:#aaa;text-align:right;line-height:1.8;}
+.footer-info a{color:#555;text-decoration:none;font-weight:700;}
+
+/* Flash deal banner */
+.flash-banner{background:linear-gradient(135deg,#c0392b,#96281b);border-radius:14px;padding:18px 24px;margin-bottom:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.flash-icon{font-size:28px;flex-shrink:0;}
+.flash-text-wrap{}
+.flash-title{font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:4px;}
+.flash-desc{font-size:15px;font-weight:800;color:#fff;letter-spacing:-0.3px;line-height:1.35;}
+.flash-sub{font-size:10px;font-weight:600;color:rgba(255,255,255,0.6);margin-top:4px;}
+
+@media(max-width:700px){
+  .plans{grid-template-columns:1fr;}
+  .addons{grid-template-columns:1fr;}
+  .transport-grid{grid-template-columns:1fr;}
+  .info-footer-dark{grid-template-columns:1fr;}
+  .hero-title{font-size:38px;}
+  .header{flex-direction:column;align-items:flex-start;gap:12px;}
+  .footer{flex-direction:column;align-items:flex-start;}
+  .footer-info{text-align:left;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="header">
+  <img src="https://mediamauricie.com/wp-content/uploads/2026/03/Media-Mauricie_logo_M-coul.png" alt="Média Mauricie" style="height:48px;">
+  <div class="header-badge">📸 Banque d'images · Abonnement mensuel</div>
+</div>
+
+<div class="hero">
+  <div class="hero-title">Des nouvelles photos.<br>Chaque mois.</div>
+  <div style="font-size:13px;font-weight:600;color:#c0392b;margin-bottom:20px;line-height:1.5;">Des images à la hauteur de vos projets.</div>
+  <div class="hero-sub">
+    On met en lumière vos activités, vos équipes et votre territoire <strong>sous tous les angles</strong> — tous les mois.<br><br>
+    Chaque shooting est planifié avec vous — calendrier d'idées, thèmes, angles prioritaires. <strong>On vous suit. On vous fait briller.</strong> 
+  </div>
+</div>
+
+
+<div style="font-size:8px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#c0392b;margin-bottom:8px;">✦ Offres mensuelles</div>
+<div class="plans">
+
+  <div class="plan">
+    <div class="plan-head">
+      <div class="plan-badge">Essentiel · 1h</div>
+      <div class="plan-name">25 photos / mois</div>
+      <div class="plan-tagline">Shooting photo de 1h · 1 photographe + drone</div>
+      <div class="plan-price-row">
+        <div class="plan-price">950</div>
+        <div class="plan-price-suffix">$ / mois + tx</div>
+      </div>
+      <div class="plan-price-note">Engagement 3, 6 ou 12 mois</div>
+    </div>
+    <div class="plan-divider" style="margin:0 26px;"></div>
+    <div class="plan-body" style="padding-top:18px;">
+      <div class="plan-section-label">Ce qui est inclus</div>
+      <ul class="plan-items">
+        <li><strong>25 photos retouchées HD</strong> livrées en 7–10 jours</li>
+        <li>Shooting photo de <strong>1h sur terrain</strong></li>
+        <li><strong>Drone inclus</strong> — prises aériennes</li>
+        <li>Photos lifestyle — activités, équipes, lieux</li>
+        <li>Album privé mis à jour chaque mois</li>
+        <li>Réunion stratégique mensuelle incluse</li>
+        <li>Déplacement inclus — zone Mauricie</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="plan featured">
+    <div class="plan-head">
+      <div class="plan-badge">Pro · 2h</div>
+      <div class="plan-name">50 photos / mois</div>
+      <div class="plan-tagline">Shooting photo de 2h · 1 photographe + drone</div>
+      <div class="plan-price-row">
+        <div class="plan-price">1 250</div>
+        <div class="plan-price-suffix">$ / mois + tx</div>
+      </div>
+      <div class="plan-price-note">Engagement 3, 6 ou 12 mois</div>
+    </div>
+    <div class="plan-divider" style="margin:0 26px;"></div>
+    <div class="plan-body" style="padding-top:18px;">
+      <div class="plan-section-label">Ce qui est inclus</div>
+      <ul class="plan-items">
+        <li><strong>50 photos retouchées HD</strong> livrées en 7–10 jours</li>
+        <li>Shooting photo de <strong>2h sur terrain</strong></li>
+        <li><strong>Drone inclus</strong> — prises aériennes</li>
+        <li>Photos lifestyle — activités, équipes, lieux</li>
+        <li>Album privé mis à jour chaque mois</li>
+        <li>Réunion stratégique mensuelle incluse</li>
+        <li>Déplacement inclus — zone Mauricie</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="inclus-strip">
+  <div class="inclus-label">Inclus dans tous les plans</div>
+  <div class="inclus-items">
+    <span class="inclus-item">Album privé permanent</span>
+    <span class="inclus-item">Droits commerciaux inclus</span>
+    <span class="inclus-item">Drone inclus</span>
+    <span class="inclus-item">Réunion stratégique mensuelle</span>
+    <span class="inclus-item">Calendrier d'idées & contenu</span>
+    <span class="inclus-item">Haute résolution</span>
+    <span class="inclus-item">Déplacement inclus — zone Mauricie</span>
+  </div>
+</div>
+
+<div style="margin-bottom:6px;">
+  <div class="sec-eyebrow">Durées d'engagement</div>
+  <div class="sec-title">Choisissez votre horizon</div>
+  <div class="sec-divider"></div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;">
+
+  <div style="background:#fff;border:1.5px solid #e0e0e0;border-radius:12px;padding:18px 20px;">
+    <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:8px;">Engagement</div>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#2d2d2d;line-height:1;">3 mois</div>
+    <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
+    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album privé actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br><br>+30 $ / photo additionnelle.</div>
+  </div>
+
+  <div style="background:#fff;border:1.5px solid #c0392b;border-top:3px solid #c0392b;border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;">Engagement</div>
+      <div style="background:#c0392b;color:#fff;font-size:7px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:20px;">Recommandé</div>
+    </div>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#2d2d2d;line-height:1;">6 mois</div>
+    <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
+    <div style="background:#fdf4f4;border:1.5px solid #f0d0d0;border-radius:8px;padding:8px 12px;margin-bottom:10px;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#c0392b;margin-bottom:3px;">✦ Offre spéciale</div>
+      <div style="font-size:11px;font-weight:700;color:#2d2d2d;line-height:1.5;">+15 photos <span style="font-weight:500;color:#666;">offertes chaque mois</span></div>
+    </div>
+    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br>+ 20 $ / photo additionnelle.</div>
+  </div>
+
+  <div style="background:#fff;border:1.5px solid #c0392b;border-top:3px solid #c0392b;border-radius:12px;padding:18px 20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;">Engagement</div>
+      <div style="background:#2d2d2d;color:#fff;font-size:7px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:20px;">Meilleure valeur</div>
+    </div>
+    <div style="font-size:32px;font-weight:800;letter-spacing:-1px;color:#2d2d2d;line-height:1;">12 mois</div>
+    <div style="height:1px;background:#f0f0f0;margin:12px 0;"></div>
+    <div style="background:#fdf4f4;border:1.5px solid #f0d0d0;border-radius:8px;padding:8px 12px;margin-bottom:10px;">
+      <div style="font-size:8px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#c0392b;margin-bottom:3px;">✦ Offre spéciale</div>
+      <div style="font-size:11px;font-weight:700;color:#2d2d2d;line-height:1.5;">Dernier mois <span style="font-weight:500;color:#666;">offert gratuitement</span></div>
+    </div>
+    <div style="font-size:10.5px;font-weight:500;color:#666;line-height:1.65;">Album actif pendant l'entente + <strong style="color:#2d2d2d;">3 mois après la fin</strong><br>+ 15 $ / photo additionnelle.</div>
+  </div>
+
+</div>
+
+<div class="bimg-strip">
+  <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:8px;">📁 Votre banque d'images privée</div>
+  <div style="font-size:11.5px;font-weight:500;color:#555;line-height:1.75;">Chaque photo livrée est ajoutée à votre <strong style="color:#2d2d2d;">album privé dédié</strong> — accessible à toute votre organisation, en tout temps. La banque grandit chaque mois. Elle reste active pendant toute la durée de l'entente, <strong style="color:#2d2d2d;">plus 3 mois après la fin</strong> pour vous permettre de finaliser vos projets en cours. Un outil vivant!</div>
+</div>
+
+<div style="margin-bottom:12px;">
+  <div class="sec-eyebrow">Options supplémentaires</div>
+  <div class="sec-title">Personnalisez votre shooting</div>
+  <div class="sec-divider"></div>
+</div>
+
+<div class="addons">
+  <div class="addon">
+    <div class="addon-tag">Options à part</div>
+    <div class="addon-name">Portraits d'équipe — installation lumières</div>
+    <div class="addon-desc">Configuration professionnelle avec éclairage studio sur site. Setup et démontage inclus. À ajouter lors d'un shooting mensuel pour photos d'équipes corporatives, pour sites & profils.</div>
+    <div style="font-size:20px;font-weight:800;color:#c0392b;margin-bottom:6px;">+350$<span style="font-size:10px;font-weight:500;color:#aaa;"> + tx · frais fixes</span></div>
+    <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+    <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#bbb;margin-bottom:6px;">Prix par personne</div>
+    <div style="font-size:18px;font-weight:700;color:#2d2d2d;">200$<span style="font-size:10px;font-weight:500;color:#aaa;"> / personne + tx (3 personnes minimum)</span></div>
+    <div style="font-size:10px;font-weight:500;color:#888;margin-top:4px;line-height:1.6;"><strong style="color:#2d2d2d;">5-10 portraits retouchés</strong> remis par personne · fond blanc, noir, neutre ou environnement de travail (lifestyle)</div>
+  </div>
+  <div class="addon">
+    <div class="addon-tag">Inclus dans les 2 plans</div>
+    <div class="addon-name">Réunion stratégique mensuelle</div>
+    <div class="addon-desc">Avant chaque shooting, on se rencontre pour définir les angles et les thématiques selon votre calendrier de contenu. Idées, séquences suggérées, événements à couvrir — on planifie ensemble pour maximiser chaque heure sur le terrain.</div>
+    <div style="font-size:20px;font-weight:800;color:#27ae60;">Incluse<span style="font-size:10px;font-weight:500;color:#aaa;"> dans tous les plans</span></div>
+    <div style="height:1px;background:#f0f0f0;margin:10px 0;"></div>
+    <div style="font-size:10px;font-weight:500;color:#888;line-height:1.6;">Calendrier d'idées · thèmes du mois · angles prioritaires · liste de shots · coordination terrain</div>
+  </div>
+</div>
+
+<div class="note-white" style="margin-bottom:14px;">
+  <div class="note-title">✦ Comment ça fonctionne</div>
+  <div class="note-text">
+    <strong>1. Réunion de démarrage</strong> — On établit ensemble votre profil de contenu : valeurs, thèmes, publics cibles, ton visuel.<br><br>
+    <strong>2. Planification mensuelle</strong> — Avant chaque shooting, réunion courte pour définir les angles du mois & les activités à couvrir.<br><br>
+    <strong>3. Shooting sur terrain</strong> — Notre photographe arrive préparé. Photos lifestyle, activités, équipes, lieux — sous tous les angles.<br><br>
+    <strong>4. Livraison</strong> — Photos retouchées HD ajoutées à votre album privé dans les <strong>7–10 jours</strong> suivant le shooting.
+  </div>
+</div>
+
+<div style="margin-bottom:12px;">
+  <div class="sec-eyebrow">Déplacement</div>
+  <div class="sec-title">Transport & conditions</div>
+  <div class="sec-divider"></div>
+</div>
+
+<div class="transport-grid">
+  <div class="note-white" style="margin-bottom:0;">
+    <div class="note-title">🗺️ Zone de déplacement incluse</div>
+    <div class="note-text" style="margin-bottom:10px;">Le déplacement est <strong>inclus dans la zone verte</strong> illustrée ci-dessous — Trois-Rivières, Shawinigan, Louiseville et les municipalités avoisinantes. Au-delà de cette zone : <strong>1 $/km</strong> aller-retour, en sus + tx.</div>
+    <img src="https://mediamauricie.com/wp-content/uploads/2026/03/map.jpg" alt="Zone de déplacement incluse — Média Mauricie" style="width:100%;border-radius:8px;display:block;margin-bottom:8px;">
+    <div style="font-size:10px;font-weight:600;color:#888;">Zone verte = déplacement inclus · 1 $/km au-delà</div>
+  </div>
+  <div class="transport-right">
+    <div class="note-white" style="margin-bottom:0;flex:1;">
+      <div class="note-title">💳 Conditions de paiement</div>
+      <div class="note-text">
+        <strong>À la signature :</strong> Les 2 premiers mois sont dus pour confirmer l'engagement et démarrer la planification.<br><br>
+        <strong>En cours d'entente :</strong> Facturation mensuelle le 1er de chaque mois, dû dans les <strong>15 jours</strong>.<br><br>
+        <strong>Dernier mois :</strong> Payé à la fin — aucun paiement d'avance sur le dernier mois.
+      </div>
+    </div>
+    <div class="note-white" style="margin-bottom:0;flex:1;">
+      <div class="note-title">❌ Politique d'annulation</div>
+      <div class="note-text">
+        <strong>Report d'un shooting :</strong> Flexible — sur réserve des disponibilités. Les dates doivent être réservées le plus tôt possible pour garantir votre créneau.<br><br>
+        <strong>Annulation du forfait complet :</strong> Tous les mois complétés doivent être payés en totalité. Le dernier mois doit également être payé pour confirmer la résiliation.<br><br>
+        Toute annulation doit être transmise par écrit.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:#fdf4f4;border:1.5px solid #f0d0d0;border-left:4px solid #c0392b;border-radius:10px;padding:18px 20px;margin-bottom:20px;">
+  <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:10px;">🚁 Drone — conditions opérationnelles</div>
+  <div style="font-size:10.5px;font-weight:500;color:#555;line-height:1.7;">Le drone est inclus sous réserve des <strong style="color:#2d2d2d;">conditions météorologiques</strong> (vent, précipitations, visibilité) et des <strong style="color:#2d2d2d;">autorisations réglementaires applicables</strong> (Transports Canada, zones contrôlées, espaces aériens restreints). Certaines zones peuvent nécessiter des autorisations spéciales — <strong style="color:#c0392b;">sur soumission si applicable.</strong> <strong style="color:#c0392b;">Média Mauricie se réserve le droit de refuser ou d'annuler le vol de drone en tout temps</strong> si les conditions ne permettent pas une opération sécuritaire, <strong style="color:#2d2d2d;">sans réduction du prix du forfait.</strong></div>
+</div>
+
+<div class="cta-row" style="margin-top:20px;">
+  <a href="https://www.mediamauricie.com/contact" class="btn-primary">Démarrer un abonnement →</a>
+  <a href="https://www.mediamauricie.com/contact" class="btn-secondary">Nous contacter pour une soumission</a>
+</div>
+
+<div class="info-footer-dark">
+  <div>
+    <div class="info-col-label">💰 Tarification</div>
+    <div class="info-col-text">Prix en <strong>dollars canadiens</strong><br>+ taxes applicables (TPS/TVQ)<br><span>Sujets à confirmation selon envergure</span></div>
+  </div>
+  <div>
+    <div class="info-col-label">📅 Engagement</div>
+    <div class="info-col-text">Engagement minimum selon durée choisie · <strong>Album actif 3 mois après la fin</strong> · Résiliation avec préavis écrit de 30 jours</div>
+  </div>
+  <div>
+    <div class="info-col-label">🛡️ Assurances</div>
+    <div class="info-col-text">Responsabilité civile <strong>2 M$</strong><br>Drone <strong>assuré & certifié</strong><br>Transport Canada</div>
+  </div>
+</div>
+
+<div class="footer">
+  <img src="https://mediamauricie.com/wp-content/uploads/2026/03/Media-Mauricie_logo_coul.png" alt="Média Mauricie" style="height:34px;">
+  <div class="footer-info">
+    <a href="https://www.mediamauricie.com">www.mediamauricie.com</a> &nbsp;&middot;&nbsp; <a href="/cdn-cgi/l/email-protection#adc4c3cbc2edc0c8c9c4ccc0ccd8dfc4cec4c883cec2c0"><span class="__cf_emai
